@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="NAVbook.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <style media="screen">
+    body {
+      margin: 0px;
+      padding: 0px;
+      background: white;
+      font-weight: Arial;
+    }
+
+    .subject a {
+      color: #CB2906;
+      padding: 50px;
+      font-style: inherit;
+      font-size: 19px;
+    }
+
+    .latest a {
+      color: #A70CA5;
+      margin-left: 45%;
+      font-style: inherit;
+      font-size: 19px;
+    }
+
+    .column {
+      float: left;
+      width: 23.33%;
+      padding: 5px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <form class="example" action="action_page.php">
+    <div class="search">
+      <input type="text" placeholder=" Search...." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="logreg not-signin-ui">
+      <a href="login.html" class="account">Login</a>
+      <a href="register.html" class="account">Register</a>
+    </div>
+    <div class="logreg signin-ui">
+      <a href="profile.html" class="account">Profile</a>
+      <button type="button" class="account" onclick="signOut()">Log Out</button>
+    </div>
+  </form>
+
+  <h1 class="name"><a href="index.html">OPENLIBARRY</a> </h1><br><br>
+  <div class="topnav">
+    <a href="index.html">Homepage</a>
+    <a class="active">Book</a>
+    <a href="Donation (1).html">Donation</a>
+    <a href="about-us.html">About Us</a>
+  </div>
+  <img class="img" src="li2.jpg" alt="library1">
+  <hr class="horizontal">
+  <div class="subject">
+    <a href="#subject">Browse by subject</a>
+  </div><br>
+  <div class="topnavbook">
+    <a class="active" href="#science">Science
+      <div class="logo-science">
+        <img src="1.jpg" class="responsive">
+      </div>
+    </a>
+    <a href="#IT">IT
+      <div class="logo-it">
+        <img src="2.png" class="responsive">
+      </div>
+    </a>
+    <a href="#politics">Politics
+      <div class="logo-politics">
+        <img src="3.png" class="responsive">
+      </div>
+    </a>
+    <a href="#economics">Economics
+      <div class="logo-economics">
+        <img src="4.png" class="responsive">
+      </div>
+    </a>
+    <a href="#Islamic">Islamic Science
+      <div class="logo-islamic">
+        <img src="5.png" class="responsive">
+      </div>
+    </a>
+    <a href="#language">Language
+      <div class="logo-language">
+        <img src="6.png" class="responsive">
+      </div>
+    </a>
+    <a href="#literature">Literature
+      <div class="logo-literature">
+        <img src="7.png" class="responsive">
+      </div>
+    </a>
+  </div><br>
+  <div class="latest">
+    <a href="#lastest">Our lastest books</a>
+  </div><br>
+
+
+  <div class="row">
+    <div class="column">
+      <img src="quran.jpg" alt="arabic" style="width:85%">
+
+    </div>
+    <div class="column">
+      <img src="covid.jpg" alt="covid" style="width:97%">
+    </div>
+    <div class="column">
+      <img src="itc.jpg" alt="c++" style="width:95%">
+    </div>
+    <div class="column">
+      <img src="politics.jpg" alt="politics" style="width:76%">
+    </div>
+  </div>
+
+
+
+  <div class="">
+
+    <a class="quran" href="http://www.qurandownload.com/arabic-quran-a.pdf" download="HTML 5 PDF"><i class="fa fa-download"></i>Download</a>
+    <a class="quran" href="http://www.qurandownload.com/arabic-quran-a.pdf" target="_blank">Read me</a>
+
+    <a class="covid" href="https://www.researchgate.net/publication/339998871_Handbook_of_COVID-19_Prevention_and_Treatment/link/5e71cde84585152cdbfa8c11/download" download="HTML 5 PDF"><i class="fa fa-download"></i>Download</a>
+    <a class="covid" href="https://www.researchgate.net/publication/339998871_Handbook_of_COVID-19_Prevention_and_Treatment/link/5e71cde84585152cdbfa8c11/download" target="_blank">Read me</a>
+
+    <a class="itc" href="http://index-of.co.uk/Programming/C++%20Programming%20From%20Problem%20Analysis%20to%20Program%20Design%20-%20D.%20S.%20Malik%20-%202011.pdf" download="HTML 5 PDF"><i class="fa fa-download"></i>Download</a>
+    <a class="itc" href="http://index-of.co.uk/Programming/C++%20Programming%20From%20Problem%20Analysis%20to%20Program%20Design%20-%20D.%20S.%20Malik%20-%202011.pdf" target="_blank">Read me</a>
+
+    <a class="politics" href="http://aberkane.yolasite.com/resources/International%20Law%20and%20International%20Relations.pdf" download="HTML 5 PDF"><i class="fa fa-download"></i>Download</a>
+    <a class="politics" href="http://aberkane.yolasite.com/resources/International%20Law%20and%20International%20Relations.pdf" target="_blank">Read me</a>
+  </div>
+
+  <!-- footer  -->
+  <hr class="buttomhr">
+  <div class="bottommanu">
+    <div class="footer-sec">
+    <a href="index.html">Welcome note</a>
+    <a href="read.html">Search a book</a>
+    <a href="book-request.html">Request a book</a>
+    <a href="Donation (1).html">Make a donation</a>
+    <a href="about-us.html">Contact Us</a>
+    <a href="https://seymourlibrary.org/read-more/" class="s">Our Sponsers</a>
+  </div>
+  </div>
+  <br>
+
+  <!-- footer end -->
+
+  <!-- footer end -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+  <script type="text/javascript">
+    //Firebase config
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7MfEQACDQcJYoK_016qrfREEvsfajEGg",
+      authDomain: "web-tech-project-b7d3f.firebaseapp.com",
+      databaseURL: "https://web-tech-project-b7d3f-default-rtdb.firebaseio.com",
+      projectId: "web-tech-project-b7d3f",
+      storageBucket: "web-tech-project-b7d3f.appspot.com",
+      messagingSenderId: "811561177001",
+      appId: "1:811561177001:web:4674d249e79f84435c7eb8",
+      measurementId: "G-JHG8MMC0QV"
+    };
+    //Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="accountsys.js"></script>
+</body>
+
+</html>

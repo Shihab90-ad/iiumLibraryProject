@@ -1,0 +1,90 @@
+@media screen {
+.first-main-container,
+.second-main-container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+.first-half-container {
+    background: #030284;
+    width: 49.5%;
+    height: 360px;
+    padding: 24px 15px;
+    float: left;
+    margin-right: 0.5%;
+    box-shadow: 0px 0px 8px 4px rgb(148 148 148);
+}
+.first-half-container h2{
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: 0px;
+}
+.first-half-container dl dt{
+    color: #ffffff;
+    padding: 5px 0px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.first-half-container dl dd{
+    color: rgb(209, 209, 209);
+    font-size: 16px;
+    font-weight: 400;
+}
+.last-half-container {
+    width: 49.5%;;
+    float: right;
+    height: 363px;
+    margin-left: 0.5%;
+ 
+    
+}
+.last-half-container img {
+    width: 100%;
+    height: 407px;
+}
+.librarian-container-box{
+    width: 20%;
+    display: contents;
+}
+.librarians-first-half{
+    width: 50%;
+    float: left;
+}
+.librarians-first-half img{
+    width: 100%;
+    height: 100%;
+}
+.librarians-last-half{
+    width: 49%;
+    float: right;
+    margin-left: 1%;
+    border-right: 1px solid black;
+    margin-right: 5px;
+}
+
+.libraians-title.second-main-container h3 {
+    background: #030284;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #030284;
+    border-radius: 3px;
+    box-shadow: 0px 0px 8px 4px rgb(148 148 148);
+}
+.hrr{
+    width: 97%;
+    margin-left: 23px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.librarians-last-half p {
+    margin-top: 60px;
+}
+.librarians-contain{
+    margin: 4px;
+    box-shadow:0px 0px 8px 4px rgb(183 179 179 / 36%);
+    display: inherit;
+}
+}

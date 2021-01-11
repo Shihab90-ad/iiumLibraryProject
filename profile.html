@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+  <form class="example" action="action_page.php">
+    <div class="search">
+      <input type="text" placeholder=" Search...." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="logreg not-signin-ui">
+      <a href="login.html" class="account">Login</a>
+      <a href="register.html" class="account">Register</a>
+    </div>
+    <div class="logreg signin-ui">
+      <a href="profile.html" class="account">Profile</a>
+      <button type="button" class="account" onclick="signOut()">Log Out</button>
+    </div>
+  </form>
+
+  <h1 class="name"><a href="index.html">OPENLIBARRY</a> </h1><br><br>
+  <div class="topnav">
+    <a href="index.html">Homepage</a>
+    <a href="read.html">Book</a>
+    <a href="Donation (1).html">Donation</a>
+    <a href="about-us.html">About Us</a>
+  </div>
+  <img class="img" src="li2.jpg" alt="library1">
+  <hr class="horizontal">
+
+  <!-- Content of the  Profile -->
+  <div class="page">
+    <div class="container-profile">
+      <div class="popUp-modal" id="popUp">
+        <div class="modal-content">
+          <div class="wrapper">
+            <div class="file-upload">
+              <input type="file" id="uploadProfilePic" accept="image/*" />
+              <i class="fa fa-arrow-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap-profile">
+        <div class="profile-title">
+          <div class="bg-img"></div>
+          <div class="user-pic" id="user-profile-pic">
+            <div class="overlay" onclick="changeProfilePic()">
+              <div class="overlay-text">
+                Click to change picture
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-profile-detail">
+          <div class="profile-user-name">
+            <span id="userName">Name</span>
+          </div>
+          <div class="profile-user-quote">
+            <span id="userQuote" onclick="toggleEditor()">Click to set quote</span>
+          </div>
+          <div id="editor">
+            <textarea id="ta1" name="ta1" rows="10" cols="50"></textarea><br />
+            <input name="submit" id="submit" type="button" value="Edit Text" onclick="doEdit()" />
+          </div>
+        </div>
+        <div class="credit">Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer  -->
+  <hr class="buttomhr">
+  <div class="bottommanu">
+    <div class="footer-sec">
+    <a href="index.html">Welcome note</a>
+    <a href="read.html">Search a book</a>
+    <a href="book-request.html">Request a book</a>
+    <a href="Donation (1).html">Make a donation</a>
+    <a href="about-us.html">Contact Us</a>
+    <a href="https://seymourlibrary.org/read-more/" class="s">Our Sponsers</a>
+  </div>
+  </div>
+  <br>
+
+  <!-- footer end -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+
+
+  <script type="text/javascript">
+    //Firebase config
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7MfEQACDQcJYoK_016qrfREEvsfajEGg",
+      authDomain: "web-tech-project-b7d3f.firebaseapp.com",
+      databaseURL: "https://web-tech-project-b7d3f-default-rtdb.firebaseio.com",
+      projectId: "web-tech-project-b7d3f",
+      storageBucket: "web-tech-project-b7d3f.appspot.com",
+      messagingSenderId: "811561177001",
+      appId: "1:811561177001:web:4674d249e79f84435c7eb8",
+      measurementId: "G-JHG8MMC0QV"
+    };
+    //Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+
+        let user = firebase.auth().currentUser;
+        let uid;
+        if (user != null) {
+          uid = user.uid;
+        }
+        let firebaseRefKey = firebase.database().ref('users/').child(uid);
+        firebaseRefKey.on('value', (dataSnapShot) => {
+          document.getElementById('userName').innerHTML = dataSnapShot.val().userName;
+          document.getElementById('userQuote').innerHTML = dataSnapShot.val().userQuote;
+        })
+
+        var firebaseStorageRef = firebase.storage().ref('userProfilePic/' + uid);
+        firebaseStorageRef.getDownloadURL().then(function(proPicURL) {
+          var image = document.getElementById('user-profile-pic');
+          var url = proPicURL;
+          image.style.backgroundImage = `url(${url})`;
+        }).catch(function(error) {
+
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          var errorTitle;
+
+          if (errorCode === "storage/unauthorized") {
+            errorTitle = 'No Permission';
+          } else {
+            errorTitle = "Error Found";
+          }
+
+          if (errorCode != "storage/object-not-found") {
+            Swal.fire({
+              type: 'error',
+              icon: 'error',
+              title: errorTitle,
+              text: errorMessage,
+            });
+          }
+        })
+      } else {
+
+      }
+    });
+
+    //Give PopUp to change Profile Picture
+    var popUp = document.getElementById('popUp');
+
+    function changeProfilePic() {
+      popUp.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == popUp) {
+        popUp.style.display = "none";
+      }
+    }
+
+    //Picture Upload into database
+    var fileUpload = document.getElementById('uploadProfilePic');
+
+    fileUpload.addEventListener('change', function(e) {
+
+      let user = firebase.auth().currentUser;
+      let uid;
+      if (user != null) {
+        uid = user.uid;
+      }
+      var file = e.target.files[0];
+      var storageRef = firebase.storage().ref('userProfilePic/' + uid);
+      var task = storageRef.put(file);
+
+      task.on('state_changed',
+        function progress(snapshot) {
+
+        },
+        function error(e) {
+
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          var errorTitle = 'Error Found';
+          Swal.fire({
+            type: 'error',
+            icon: 'error',
+            title: errorTitle,
+            text: errorMessage,
+          })
+        },
+        function complete(e) {
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Upload Success',
+          }).then((value) => {
+            setTimeout(function() {
+              window.location.replace("profile.html");
+            }, 10)
+          });
+        }
+      );
+    })
+
+    function toggleEditor() {
+      var theText = document.getElementById('userQuote');
+      var theEditor = document.getElementById('ta1');
+      var editorArea = document.getElementById('editor');
+
+      //set text in text div to textarea
+      //correct line breaks, prevent HTML injection
+      var subject = theText.innerHTML;
+      subject = subject.replace(new RegExp("<br />", "gi"), '/newline');
+      subject = subject.replace(new RegExp("<br />", "gi"), '/newline');
+      subject = subject.replace(new RegExp("<", "gi"), '<');
+      subject = subject.replace(new RegExp(">", "gi"), '>');
+      theEditor.value = subject;
+
+      //hide text, show editor
+      theText.style.display = 'none';
+      editorArea.style.display = 'inline';
+    }
+
+    function doEdit() {
+      var theText = document.getElementById('userQuote');
+      var theEditor = document.getElementById('ta1');
+      var editorArea = document.getElementById('editor');
+
+      //this is where you would call your AJAX update script
+      //e.g., doXMLRequest(data);
+      //you probably want to make your DB update BEFORE converting for display
+      let user = firebase.auth().currentUser;
+      let uid;
+      if (user != null) {
+        uid = user.uid;
+      }
+      var firebaseRef = firebase.database().ref('users/').child(uid);
+      firebaseRef.update({
+        "userQuote": theEditor.value,
+      });
+
+      //set text to be value in editor
+      //correct line breaks, prevent HTML injection
+      var subject = theEditor.value;
+      subject = subject.replace(new RegExp("<", "g"), '<');
+      subject = subject.replace(new RegExp(">", "g"), '>');
+      subject = subject.replace(new RegExp("/newline", "g"), '<br />');
+      theText.innerHTML = subject;
+
+      //hide editor, show text
+      theText.style.display = 'inline';
+      editorArea.style.display = 'none';
+    }
+  </script>
+
+  <script src="accountsys.js"></script>
+</body>
+
+</html>

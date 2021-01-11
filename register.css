@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: black;
+
+}
+
+.signup{
+  width: 95%;
+  margin: auto;
+  background: linear-gradient(rgb(6 6 6 / 7%), rgb(117 115 115 / 14%)), url(ragister-bg.jpeg);
+  box-shadow: 0px 0px 10px 3px #696565;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 40px 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+.container {
+  width: 580px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 1px 1px 7px 6px rgb(72 72 72 / 73%);
+}
+
+.signup-content {
+  background: #ffffff;
+  padding: 50px 85px;
+  border-radius: 10px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+h2 {
+  line-height: 1.66;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  color: #222222;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #ebebeb;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  background-image: linear-gradient(to left, #4dbb45, #0a5082);
+}
+
+.zmdi {
+  display: inline-block;
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+input[type=checkbox]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: none;
+}
+
+input[type=checkbox]:not(old)+label {
+  display: inline-block;
+  margin-top: 7px;
+  margin-bottom: 25px;
+}
+
+.label-agree-term {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+}
+
+input[type=checkbox]:not(old)+label>span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 15px;
+  margin-bottom: 3px;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  background: white;
+  background-image: linear-gradient(white, white);
+  vertical-align: bottom;
+}
+
+input[type=checkbox]:not(old):checked+label>span::before {
+  content: '\f26b';
+  display: block;
+  color: #222222;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Material-Design-Iconic-Font';
+  font-weight: bold;
+}
+
+.term-serv {
+  color: #555555;
+}
+
+.zmdi-alert-circle {
+  color: red;
+  padding-right: 10px;
+}
+
+.btn-error {
+  border: 2px dashed red;
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 13px;
+  width: 55%;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: red;
+}
+
+.btn-error-pass-short {
+  display: none;
+  width: 65%;
+}
+
+.btn-error-pass {
+  display: none;
+  width: 61%;
+}
+
+.btn-error-tick {
+  display: none;
+}
+
+.btn-error-input-name {
+  display: none;
+  width: 33%;
+}
+
+.btn-error-input-email {
+  display: none;
+  width: 38%;
+}
+
+.btn-error-input-pass {
+  display: none;
+  width: 88%;
+}
+
+.loginhere {
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 5px;
+}
+
+.login-link {
+  font-weight: 700;
+  color: #222;
+}
+
+.error {
+  outline: 1px solid red;
+}

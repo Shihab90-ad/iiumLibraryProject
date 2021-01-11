@@ -1,0 +1,146 @@
+@media screen {
+  .h{
+      background-color: rgb(219, 216, 216);
+      margin-left: 2%;
+      border-radius: 20px 20px;
+      width: 97%;
+      
+  }
+  .h h3{
+      color: rgb(42, 168, 42);
+      padding-top: 1px;
+      font-size: 0.5cm;
+      font:  2em sans-serif;
+      padding-bottom: 1px;
+      text-align: center;
+  }
+  .h .likha a{
+      text-decoration: none;
+      font: 1em sans-serif;
+  }
+  h1{
+      text-align: center;
+      color: green;
+      margin-left: 2.5%;
+  }
+  .ot{
+      text-align: center;
+      color: red;
+      margin-left: 2.5%;
+  }
+  .bg{
+      width: 100%;
+      margin-left: 2.5%;
+      text-align: center;
+  }
+  .bg{
+      width: 95%;
+      background-image: url("lii1.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      box-shadow: 0px 0px 6px 6px rgb(139, 135, 135);
+      float: left;
+      padding: 70px 0px;
+      margin-bottom: 20px;
+      display: flex;
+  }
+  .containers {
+    margin: auto;
+    background: #fff;
+    width: 400px;
+    text-align: left;
+    padding: 29px 15px 39px 34px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    background: #fff;
+    width: 400px;
+    text-align: left;
+    padding: 29px 15px 39px 34px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px 1px black;;
+    }
+  form.containers input[type="text"],select{
+    padding: 8px 10px;
+    width: 90%;
+    margin: 5px 0px;
+    outline: auto;
+    outline-color: #848484;
+  }
+  form.containers label {
+    font-size: 20px;
+    color: #212020;
+    font-weight: 600;
+  }
+  select#Sponsor {
+    width: 88%;
+  }
+  form.containers input[type="button"] {
+    background: #008001;
+    border: 1px solid #008001;
+    box-shadow: 0px 0px 2px 2px black;
+    padding: 8px 15px;
+    width: 150px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+ 
+  .h3 h3{
+      width: 100%;
+      text-align: center;
+      
+  }
+    .thanks-message h3 {
+      width: 94%;
+      background: #DBD8D8;
+      padding: 6px;
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 43px;
+      text-align: center;
+      display: flow-root;
+      color: #2aa82f;
+      font-size: 24px;
+      text-shadow: 1px 1px 3px #c5c5c5;
+  }
+  .container select{
+    background: #fff;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+  }
+  .select-option{
+    position: relative;
+  }
+  .select-option:before {
+    content: "<>";
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    width: 29px;
+    height: 37px;
+    background: #130233;
+    position: absolute;
+    margin-top: 1px;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 4px;
+    padding-left: 4px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    padding-top: 6px;
+    border-radius: 5px 5px 0px 0px;
+    pointer-events: none;
+    top: 0;
+    right: 46px;
+    border: 1px solid #130233;
+}
+
+}

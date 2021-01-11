@@ -1,0 +1,67 @@
+.quran{
+  padding:12px 11px;
+font-size:16px;
+border-radius:3px;
+border:solid 1px whitesmoke;
+background-color:DodgerBlue;
+text-decoration:none;
+color:white;
+display: inline-block;
+margin: -9px -70px 2px 80px;
+cursor: pointer;
+}
+
+.quran:hover {
+  background-color: Blue;
+}
+
+.covid{
+  padding:12px 11px;
+font-size:16px;
+border-radius:3px;
+border:solid 1px whitesmoke;
+background-color:DodgerBlue;
+text-decoration:none;
+color:white;
+display: inline-block;
+margin: -9px -215px 2px 225px;
+cursor: pointer;
+}
+
+.covid:hover {
+  background-color: Blue;
+}
+
+.itc{
+padding:12px 11px;
+font-size:16px;
+border-radius:3px;
+border:solid 1px whitesmoke;
+background-color:DodgerBlue;
+text-decoration:none;
+color:white;
+display: inline-block;
+margin: -9px -350px 2px 360px;
+cursor: pointer;
+}
+
+.itc:hover {
+  background-color: Blue;
+}
+
+.politics{
+padding:12px 11px;
+font-size:16px;
+border-radius:3px;
+border:solid 1px whitesmoke;
+background-color:DodgerBlue;
+text-decoration:none;
+color:white;
+display: inline-block;
+margin: -9px -440px 2px 450px;
+cursor: pointer;
+}
+
+.politics:hover {
+  background-color: Blue;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <div class="outer-box">
+    <div class="img-box">
+      <p id="sign">Login</p>
+    </div>
+    <div class="inner-box">
+      <span id="email">
+        <label class="label-input input-en" for="email">Email</label>
+        <input class="en-input val-input" type="email" name="email" id="SIemail" placeholder="Enter email" onblur="checkUserSIEmail()">
+        <p class="btn-error btn-error-input-email" id="error-userName"><i class="zmdi zmdi-alert-circle "></i>Email is invalid!</p>
+      </span>
+      <br>
+      <span id="password">
+        <label class="label-input input-pass" for="password">Password</label>
+        <input class="ps-input val-input" type="password" name="password" id="SIpassword" placeholder="Enter password" onblur="checkUserSIPass()">
+        <p class="btn-error btn-error-input-pass" id="error-userName"><i class="zmdi zmdi-alert-circle "></i>Password is invalid!</p>
+      </span>
+      <br>
+      <label class="container">
+        <a href="forgot-pass.html" class="txt1">
+          Forget Password?
+        </a>
+      </label>
+      <br>
+      <div class="container-btn">
+        <button class="btn-login" type="button" onclick="signIn()">
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+  <script type="text/javascript">
+    //Firebase config
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7MfEQACDQcJYoK_016qrfREEvsfajEGg",
+      authDomain: "web-tech-project-b7d3f.firebaseapp.com",
+      databaseURL: "https://web-tech-project-b7d3f-default-rtdb.firebaseio.com",
+      projectId: "web-tech-project-b7d3f",
+      storageBucket: "web-tech-project-b7d3f.appspot.com",
+      messagingSenderId: "811561177001",
+      appId: "1:811561177001:web:4674d249e79f84435c7eb8",
+      measurementId: "G-JHG8MMC0QV"
+    };
+    //Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="accountsys.js"></script>
+</body>
+
+</html>

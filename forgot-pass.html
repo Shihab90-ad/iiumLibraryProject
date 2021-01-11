@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reset Password</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="forgot-pass.css">
+</head>
+
+<body>
+
+  <div class="outer-border">
+    <div class="inner-border">
+      <div class="wrap-form">
+        <div class="form">
+          <span class="form-title">
+            Forgot Password
+          </span>
+          <div class="wrap-text">
+            <p class="text">Please enter your email to send the password reset link. Make sure to check the spam inbox as well</p>
+          </div>
+          <div class="wrap-email valid-input">
+            <input class="email" type="email" name="email" id="email">
+            <span class="label-email">Email</span>
+          </div>
+          <div class="container-btn">
+            <button class="btn" type="button" onclick="resetPass()">
+              Reset Password
+            </button>
+          </div>
+          <div class="text-direct">
+            <a href="register.html" class="txt1">
+              Don't have an account? Register Now!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+  <script type="text/javascript">
+    //Firebase config
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7MfEQACDQcJYoK_016qrfREEvsfajEGg",
+      authDomain: "web-tech-project-b7d3f.firebaseapp.com",
+      databaseURL: "https://web-tech-project-b7d3f-default-rtdb.firebaseio.com",
+      projectId: "web-tech-project-b7d3f",
+      storageBucket: "web-tech-project-b7d3f.appspot.com",
+      messagingSenderId: "811561177001",
+      appId: "1:811561177001:web:4674d249e79f84435c7eb8",
+      measurementId: "G-JHG8MMC0QV"
+    };
+    //Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //******************** Email Focus ***************************************
+    $('.email').each(function(){
+      $(this).on('blur', function(){
+        if ($(this).val().trim() != "") {
+          $(this).addClass('has-val');
+        } else {
+          $(this).removeClass('has-val');
+        }
+      });
+    });
+  </script>
+
+  <script src="accountsys.js"></script>
+
+</body>
+
+</html>

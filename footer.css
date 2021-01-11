@@ -1,0 +1,59 @@
+@media screen {
+.buttomhr{
+    width: 98%;
+    margin-left: 1.5%;
+    border: 2px solid rgb(5, 5, 90);
+    border-radius: 5px; 
+  }
+  .bottommanu{
+    width: 100%;
+    background-color: #d9d9d9a1;
+    margin: 13px 0px 9px 7px;
+    border-radius: 2px 2px;
+  }
+  /* .bottommanu a{
+    text-decoration: none;
+    float: center;
+    margin-right: 6%;
+    text-align: left;
+    color: black;
+    font-size: 19px;
+    text-shadow: 1px 1px 3px black;
+  } */
+
+
+
+    
+
+  .bottommanu a:hover{
+    color: #130233;
+  }
+  .bottommanu  .active{
+    float: left;
+    padding-left:50px;
+  }
+  .bottommanu .c{
+    float: right;
+    padding-right: -70px;
+  }
+  .footer-sec{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .footer-sec a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    text-shadow: 1px 1px 3px black;
+    padding: 0px 50px;
+  }
+  .footer-sec a:first-child{
+    padding-left: 0px !important;
+  }
+  .footer-sec a:last-child{
+    padding-right: 0px !important;
+  }
+}

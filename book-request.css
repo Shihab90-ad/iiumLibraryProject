@@ -1,0 +1,72 @@
+@media screen {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.book-request-main-content{
+    width: 95%;
+    margin: auto;
+    height: auto;
+    background:linear-gradient(rgb(6 6 6 / 68%), rgb(47 47 47 / 69%)), url(li100.jpg);
+    box-shadow: 0px 0px 10px 3px gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin-right:26px;
+    margin-bottom: 30px;
+}
+
+.book-rquest {
+    display: table;
+    width: 538px;
+    margin: auto;
+    background: #fff;
+    padding: 25px 45px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 8px 1px black;
+    box-sizing: border-box;
+}
+.heading-book-request {
+    text-align: center;
+    width: 538px;
+    margin: auto;
+    background: rgb(75, 77, 204);
+    margin-top: 10px;
+    color: #e3e3eb;
+    box-shadow: 0px 0px 8px 1px black;
+    text-shadow: 1px 1px 6px rgb(113 111 111);
+    padding: 14px;
+    border-radius: 5px 5px 0px 0px;
+}
+form.book-request-form label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #100e0e;
+}
+form.book-request-form input[type="text"] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 7px 0px;
+    outline: auto;
+    outline-color: #929292;
+}
+input#nameId {
+    width: 49%;
+}
+form.book-request-form input[type="submit"] {
+    background: #010080;
+    border: 1px solid #010080;
+    color: #fff;
+    font-size: 16px;
+    width: 150px;
+    box-shadow: 0px 0px 2px 2px black;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+}

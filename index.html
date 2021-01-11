@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+  <form class="example" action="read.html">
+    <div class="search">
+      <input type="text" placeholder=" Search...." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="logreg not-signin-ui">
+      <a href="login.html" class="account">Login</a>
+      <a href="register.html" class="account">Register</a>
+    </div>
+    <div class="logreg signin-ui">
+      <a href="profile.html" class="account">Profile</a>
+      <button type="button" class="account" onclick="signOut()">Log Out</button>
+    </div>
+  </form>
+
+  <h1 class="name"><a href="index.html">OPENLIBARRY</a> </h1><br><br>
+  <div class="topnav">
+    <a class="active">Homepage</a>
+    <a href="read.html">Book</a>
+    <a href="Donation (1).html">Donation</a>
+    <a href="about-us.html">About Us</a>
+  </div>
+
+  <!-- main content start -->
+
+  <div class="row-element">
+    <img class="img" src="https://media2.s-nbcnews.com/i/newscms/2020_15/3297941/200406-book-shelf-library-generic-ac-1101p_020e2306d7f38084a8fc201ace0bfa2e.jpg">
+
+  <hr class="horizontal">
+
+  <!-- welcome section start -->
+
+  <div class="wellcome-box">
+    <h3>WELLCOME</h3>
+    <p>To our public library</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officia nam recusandae labore. Neque nulla exercitationem ut fugit nisi eum, voluptatum veritatis cumque ullam totam dicta similique qui blanditiis error.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta officia nam recusandae labore. Neque nulla exercitationem ut fugit nisi eum, voluptatum veritatis cumque ullam totam dicta similique qui blanditiis error.</p>
+    <a href="https://seymourlibrary.org/read-more/">read more</a>
+  </div>
+
+
+  <!-- welcome section end -->
+
+
+  <!-- book list start -->
+  <h2 class="start">Start your journey with wide range of books......</h2>
+  <div class="books">
+    <h2>Library Catalogue</h2>
+    <ul class="ull">
+    <li><a href="read.html">Book1</a><br></li>
+    <li><a href="read.html">Book2</a><br></li>
+    <li><a href="read.html">Book3</a><br></li>
+    <li><a href="read.html">Book4</a><br></li>
+    <li><a href="read.html">Book5</a><br></li>
+    </ul>
+  </div>
+
+  <!-- book list end -->
+
+  </div>
+
+  <!-- main content end -->
+
+  <!-- footer  -->
+
+  <hr class="buttomhr">
+  <div class="bottommanu">
+    <div class="footer-sec">
+    <a href="index.html">Welcome note</a>
+    <a href="read.html">Search a book</a>
+    <a href="book-request.html">Request a book</a>
+    <a href="Donation (1).html">Make a donation</a>
+    <a href="about-us.html">Contact Us</a>
+    <a href="https://seymourlibrary.org/read-more/" class="s">Our Sponsers</a>
+  </div>
+  </div>
+  <br>
+
+  <!-- footer end -->
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+  <script type="text/javascript">
+    //Firebase config
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7MfEQACDQcJYoK_016qrfREEvsfajEGg",
+      authDomain: "web-tech-project-b7d3f.firebaseapp.com",
+      databaseURL: "https://web-tech-project-b7d3f-default-rtdb.firebaseio.com",
+      projectId: "web-tech-project-b7d3f",
+      storageBucket: "web-tech-project-b7d3f.appspot.com",
+      messagingSenderId: "811561177001",
+      appId: "1:811561177001:web:4674d249e79f84435c7eb8",
+      measurementId: "G-JHG8MMC0QV"
+    };
+    //Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="accountsys.js"></script>
+</body>
+
+</html>
